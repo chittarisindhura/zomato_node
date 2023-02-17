@@ -11,7 +11,7 @@ connectDatabase();
 PassportAuth();
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://polite-bunny-35aeda.netlify.app",
   })
 );
 app.use(

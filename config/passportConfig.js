@@ -5,7 +5,6 @@ const LocalStrategy = require("passport-local");
 const PassportAuth = () => {
   passport.use(
     new LocalStrategy((username, password, done) => {
-      console.log("u", username, password);
       User.findOne({ email: username }, (err, user) => {
         if (err) throw err;
         if (!user) return done(null, false);
